@@ -1,0 +1,1 @@
+require 'omniauth_china/oauth_china'
