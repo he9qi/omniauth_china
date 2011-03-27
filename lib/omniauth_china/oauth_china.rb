@@ -1,4 +1,4 @@
-arequire 'omniauth/core'
+require 'omniauth/core'
 
 module OmniAuth
   module Strategies
