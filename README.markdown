@@ -30,9 +30,10 @@ Run the generator to generate `xd_receiver.html` and include helper into Applica
 
     rails g omniauth_renren:install
 
-Place the Renren Connect button on any page by simply call `omniauth_renren_connect_button`:
+Place the Renren Connect button on any page by simply call `omniauth_renren_connect_button` and `omniauth_renren_javascript`:
 
     <%= omniauth_renren_connect_button %>
+    <%= omniauth_renren_javascript %>
 
 Route `/auth/renren` to the page that contain Renren Connect button:
 

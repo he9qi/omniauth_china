@@ -1,4 +1,4 @@
-require 'omniauth/cookie'
+require 'omniauth_china/oauth_china'
 
 module OmniAuth
   module Strategies
