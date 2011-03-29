@@ -35,8 +35,9 @@ module OmniAuth
       end
 
       def auth_hash
+				# NOTE: Tencent not give uid current, use username instead.
         OmniAuth::Utils.deep_merge(super, {
-          'uid' => user_hash["data"]['uid'],
+          'uid' => user_hash["data"]['name'],
           'user_info' => user_info,
           'extra' => {'user_hash' => user_hash}
         })
@@ -49,7 +50,7 @@ module OmniAuth
           'name' => user_hash["data"]['nick'],
           'location' => user_hash["data"]['location'],
           'image' => user_hash["data"]['head'],
-          'description' => user_hash['description'],
+          'description' => user_hash['data']['introduction'],
           'urls' => {
             'Tqq' => 't.qq.com'
           }
