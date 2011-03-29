@@ -29,7 +29,7 @@ module OmniAuth
 
       def auth_hash
         OmniAuth::Utils.deep_merge(super, {
-          'uid' => user_hash['screen_name'],
+          'uid' => user_hash['id'],
           'user_info' => user_info,
           'extra' => {'user_hash' => user_hash}
         })
@@ -38,8 +38,8 @@ module OmniAuth
       def user_info
         user_hash = self.user_hash
         {
-          'username' => user_hash['name'],
-          'name' => user_hash['realName'],
+          'username' => user_hash['screen_name'],
+          'name' => user_hash['name'],
           'location' => user_hash['location'],
           'image' => user_hash['profile_image_url'],
           'description' => user_hash['description'],
