@@ -24,7 +24,7 @@ OmniAuth currently supports the following external providers:
   * Tqq (credit: [he9qi](http://github.com/he9qi))
 * Renren (Renren Connect of renren.com) (credit: [taweili](http://github.com/taweili), [rainux](http://github.com/rainux))
 
-## 人人
+## 人人（[taweili](http://github.com/taweili), [rainux](http://github.com/rainux))
 
 Run the generator to generate `xd_receiver.html` and include helper into ApplicationHelper:
 
@@ -65,6 +65,10 @@ The hash in question will look something like this:
     }
     
 The `user_info` hash will automatically be populated with as much information about the user as OmniAuth was able to pull from the given API or authentication provider.
+
+## Contributors (thanks!)
+  * [huacnlee](http://github.com/huacnlee)
+
 
 ## TODO
 
