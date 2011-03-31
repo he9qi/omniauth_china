@@ -14,12 +14,8 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "omniauth_china"
   
-  s.add_dependency  'oa-core',  '~> 0.2.0.beta1'
-  s.add_dependency  'oa-oauth', '~> 0.2.0.beta1'
-  s.add_dependency  'multi_json', '~> 0.0.2'
-  s.add_dependency  'nokogiri',   '~> 1.4.2'
-  s.add_dependency  'oauth',      '~> 0.4.0'
-  s.add_dependency  'oauth2',     '~> 0.1.0'
+  s.add_dependency  'oa-core',  '~> 0.2.0'
+  s.add_dependency  'oa-oauth', '~> 0.2.0'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
