@@ -26,7 +26,7 @@ OmniAuth currently supports the following external providers:
 
 ## 人人（[taweili](http://github.com/taweili), [rainux](http://github.com/rainux), [he9qi](http://github.com/he9qi))
 
-人人 uses Oauth 2.0 now, however, As of right now, 人人still needs session key to get more user information besides uid　[see here](http://wiki.dev.renren.com/wiki/%E8%8E%B7%E5%8F%96%E4%BA%BA%E4%BA%BA%E7%BD%91%E8%B5%84%E6%BA%90), so we still need `session.rb` and `service.rb` if we want more user information. Hopefully this will change soon in the future.
+人人 has been updated to Oauth 2.0; However, as of right now, 人人 still needs session key to get more user information other than just uid[see here](http://wiki.dev.renren.com/wiki/%E8%8E%B7%E5%8F%96%E4%BA%BA%E4%BA%BA%E7%BD%91%E8%B5%84%E6%BA%90), so we still need to request the session key by `https://graph.renren.com/renren_api/session_key?oauth_token='access_token'`.  Hopefully this will change soon in the future.
 
 ## Usage
 
