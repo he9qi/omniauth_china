@@ -1,13 +1,9 @@
 PATH
   remote: .
   specs:
-    omniauth_china (0.0.3)
-      multi_json (~> 0.0.2)
-      nokogiri (~> 1.4.2)
-      oa-core (~> 0.2.0.beta1)
-      oa-oauth (~> 0.2.0.beta1)
-      oauth (~> 0.4.0)
-      oauth2 (~> 0.1.0)
+    omniauth_china (0.0.6)
+      oa-core (~> 0.2.0)
+      oa-oauth (~> 0.2.0)
 
 GEM
   remote: http://rubygems.org/
@@ -145,12 +141,6 @@ DEPENDENCIES
   capybara (>= 0.4.0)
   json (~> 1.4.3)
   mg (~> 0.0.8)
-  multi_json (~> 0.0.2)
-  nokogiri (~> 1.4.2)
-  oa-core (~> 0.2.0.beta1)
-  oa-oauth (~> 0.2.0.beta1)
-  oauth (~> 0.4.0)
-  oauth2 (~> 0.1.0)
   omniauth_china!
   rack
   rack-test (~> 0.5.4)

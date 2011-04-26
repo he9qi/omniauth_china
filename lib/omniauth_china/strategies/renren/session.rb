@@ -13,11 +13,10 @@ module OmniAuth
         attr_reader :expires
         attr_reader :uid
 
-        def initialize(cookies)
-          options = extract_renren_cookies(cookies)
-          @expires = options['expires'] ? Integer(options['expires']) : 0
-          @session_key = options['session_key']
-          @uid = options['user']
+        def initialize(user_hash)
+          @expires = user_hash['renren_token']['expires_in'] ? user_hash['renren_token']['expires_in'].to_i : 0
+          @session_key = user_hash['renren_token']['session_key']
+          @uid = user_hash['user']['id']
         end
 
         def user
@@ -65,26 +64,6 @@ module OmniAuth
         end
 
         private
-        def extract_renren_cookies(cookies)
-          parsed = {}
-          xn_cookie_names(cookies).each { |key| parsed[key[xn_cookie_prefix.size, key.size]] = cookies[key] }
-
-          # #returning gracefully if the cookies aren't set or have expired
-          # return unless parsed['session_key'] && parsed['user'] && parsed['expires'] && parsed['ss']
-          # # TODO: check expires, why it alway less than Time.now
-          # return unless (Time.at(parsed['expires'].to_s.to_f) > Time.now) || (parsed['expires'] == "0")
-          # #if we have the unexpired cookies, we'll throw an exception if the sig doesn't verify
-          verify_signature(parsed, cookies[Renren.api_key])
-          parsed
-        end
-
-        def xn_cookie_names(cookies)
-          xn_cookie_names = cookies.keys.select {|k| k && k.starts_with?(xn_cookie_prefix) }
-        end
-
-        def xn_cookie_prefix
-          Renren.api_key + '_'
-        end
 
         def verify_signature(renren_sig_params, expected_signature)
           self.class.send :verify_signature, renren_sig_params, expected_signature

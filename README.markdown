@@ -22,22 +22,11 @@ OmniAuth currently supports the following external providers:
   * T163 (credit: [he9qi](http://github.com/he9qi))
   * Tsohu (credit: [he9qi](http://github.com/he9qi))
   * Tqq (credit: [he9qi](http://github.com/he9qi))
-* Renren (Renren Connect of renren.com) (credit: [taweili](http://github.com/taweili), [rainux](http://github.com/rainux))
+  * Renren (credit: [taweili](http://github.com/taweili), [rainux](http://github.com/rainux), [he9qi](http://github.com/he9qi))
 
-## 人人（[taweili](http://github.com/taweili), [rainux](http://github.com/rainux))
+## 人人（[taweili](http://github.com/taweili), [rainux](http://github.com/rainux), [he9qi](http://github.com/he9qi))
 
-Run the generator to generate `xd_receiver.html` and include helper into ApplicationHelper:
-
-    rails g omniauth_renren:install
-
-Place the Renren Connect button on any page by simply call `omniauth_renren_connect_button` and `omniauth_renren_javascript`:
-
-    <%= omniauth_renren_connect_button %>
-    <%= omniauth_renren_javascript %>
-
-Route `/auth/renren` to the page that contain Renren Connect button:
-
-    match '/auth/renren' => 'users#show'
+人人 uses Oauth 2.0 now, however, As of right now, 人人still needs session key to get more user information besides uid　[see here](http://wiki.dev.renren.com/wiki/%E8%8E%B7%E5%8F%96%E4%BA%BA%E4%BA%BA%E7%BD%91%E8%B5%84%E6%BA%90), so we still need `session.rb` and `service.rb` if we want more user information. Hopefully this will change soon in the future.
 
 ## Usage
 
@@ -69,7 +58,3 @@ The `user_info` hash will automatically be populated with as much information ab
 ## Contributors (thanks!)
   * [huacnlee](http://github.com/huacnlee)
 
-
-## TODO
-
-Write better tests!!
