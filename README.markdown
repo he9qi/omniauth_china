@@ -1,10 +1,15 @@
 # OmniAuth: Standardized Multi-Provider Authentication
 
-OmniAuth is a new Rack-based authentication system for multi-provider external authentcation. OmniAuth is built from the ground up on the philosophy that **authentication is not the same as identity**, and is based on two observations:
+OmniAuth is a new Rack-based authentication system for multi-provider external authentcation. OmniAuth is built from the ground up on the philosophy that **authentication is not the same as identity**.
+
+## Apparently, oauth providers of China have already been merged into [intridea/omniauth](https://github.com/intridea/omniauth). Go take a look.
+
 
 # OmniAuthChina (omniauth_china) 
 
-OmniAuth China is an extention of OmniAuth, it addes Open ID providers in China such as Douban, Sina, Sohu, 163, Tencent, Renren, etc.
+OmniAuth China is an extention of OmniAuth, it addes Open ID providers in China such as Douban, Sina, Sohu, 163, Tencent, Renren, Qzone, etc.
+
+## Note
 
 ## Installation
 
@@ -22,11 +27,8 @@ OmniAuth currently supports the following external providers:
   * T163 (credit: [he9qi](http://github.com/he9qi))
   * Tsohu (credit: [he9qi](http://github.com/he9qi))
   * Tqq (credit: [he9qi](http://github.com/he9qi))
-  * Renren (credit: [taweili](http://github.com/taweili), [rainux](http://github.com/rainux), [he9qi](http://github.com/he9qi))
-
-## 人人（[taweili](http://github.com/taweili), [rainux](http://github.com/rainux), [he9qi](http://github.com/he9qi))
-
-人人 has been updated to Oauth 2.0; However, as of right now, 人人 still needs session key to get more user information other than just uid[see here](http://wiki.dev.renren.com/wiki/%E8%8E%B7%E5%8F%96%E4%BA%BA%E4%BA%BA%E7%BD%91%E8%B5%84%E6%BA%90), so we still need to request the session key by `https://graph.renren.com/renren_api/session_key?oauth_token='access_token'`.  Hopefully this will change soon in the future.
+  * Renren (credit: [quake](http://github.com/quake))
+  * Qzone (credit: [quake](http://github.com/quake))
 
 ## Usage
 
